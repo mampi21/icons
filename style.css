@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 30vw;
+    height: 50vw;
+    background: linear-gradient(purple,rgb(248, 148, 164));
+    
+}
+
+.container{
+    display: flex; /* Change to column to align icons vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 200px 500px;
+    flex-direction: row;
+    
+}
+
+
+.icons{
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height equal to the width */
+    border: 2px solid black;
+    border-radius: 50%; /* Change to 50% for a perfect circle */
+    margin: 20px;
+    padding: 40px;
+    background-color: black;
+    color: white;
+    font-size: 200%;
+    display: flex; /* Use flexbox to center text */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    box-shadow: 4px 16px 33px 2px black;
+}
+
+.hide{
+    position: absolute;
+    color: white;
+    background-color: blue;
+    padding: 4px;
+    font-size: 22px;
+    margin: 0px 0px 172px 0px;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+    border-radius: 4px;
+    opacity: 0;
+}
+
+.icons .hide::before{
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: blue;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+    
+}
+
+.icons:hover .hide{
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    
+}
+
+.icons:hover{
+    background-color: blue;
+}
+
+
+
+
+
+
+
